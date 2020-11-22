@@ -1,0 +1,30 @@
+.ant-layout-sider-children .headerTitle {
+  background: rgba(255, 255, 255, .2);
+  margin: 16px;
+  padding: 5px 0;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 22px;
+  font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.site-layout .site-layout-background {
+  background: #fff;
+}
+/*///自动移滚动条样式*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: rgba(50, 50, 50, .3);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1em;
+  background-color: rgba(50, 50, 50, .1);
+}

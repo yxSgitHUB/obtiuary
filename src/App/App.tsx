@@ -1,20 +1,22 @@
 import React ,{useState,FC} from "react";
 import {Button} from "antd";
+import {Login}  from '../Page/Login';
+import {MyLayout} from '../FrameWork/Layout'
 import './App.css';
 const App:FC=()=>{
   let [user,setUser] = useState({
-    name:"",
-    password:""
+    userName:"",
+    phone:"",
   })
-  return <div>
-    <p>user.name:{user.name}</p>
-    <p>user.password:{user.password}</p>
-    <Button onClick={()=>{
-      setUser({
-        name:"name",
-        password: "password"
-      })
-    }}>user set name:"name"，password:"password"</Button>
-  </div>
+  let [loginStatus,setLoginStatus] = useState(false)
+  return loginStatus?<div>
+    <MyLayout />
+  </div>: <Login onChange={(userParam:{
+    userName:string,
+    phone:string,
+  }, status:boolean)=>{
+    setUser(userParam);
+    setLoginStatus(status)
+  }}/>
 }
 export default App;
