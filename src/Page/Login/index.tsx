@@ -28,7 +28,7 @@ export const Login:FC<{onChange:(userParam:{userName:string,phone:string}, statu
 
     return (
        <div className='loginBox'>
-           <Card title={"生死簿-后台管理系统"} style={{ width: 600 }}>
+           <Card title={"地府后台管理系统"} style={{ width: 600 }}>
                <Form
                    {...layout}
                    name="basic"
