@@ -1,6 +1,7 @@
 import React ,{FC} from "react";
 import { Layout, Menu } from 'antd';
 import {Result} from "../Sidebar"
+import Router from "../../Router/Router"
 import "./index.scss"
 const { Header, Content, Footer, Sider } = Layout;
 export const MyLayout:FC = ()=>{
@@ -24,8 +25,8 @@ export const MyLayout:FC = ()=>{
         <Layout className="site-layout" style={{ marginLeft: 200 }}>
             <Header className="site-layout-background" style={{ padding: 0 }} />
             <Content style={{ margin: '24px 16px 0', overflow: 'initial' }}>
-                <div className="site-layout-background" style={{ padding: 24, textAlign: 'center' }}>
-
+                <div className="site-layout-background" style={{ padding: 24,minHeight:"79vh", textAlign: 'center' }}>
+                    <Router/>
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>

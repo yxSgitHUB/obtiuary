@@ -1,5 +1,5 @@
 import React ,{FC} from "react";
-import { Form, Input, Button } from 'antd';
+import { Form, Input, Button, Card } from 'antd';
 import axios from "../../Axios"
 import "./index.scss"
 const layout = {
@@ -13,13 +13,13 @@ const FormItem = Form.Item
 export const Login:FC<{onChange:(userParam:{userName:string,phone:string}, status:boolean)=>void}> = (props) => {
     const onFinish = (values:{userName:string,phone:string}) => {
         axios.post("/test/login",{...values}).then((data:any)=>{
-            console.log(data)
+            //console.log(data)
                 if(data.data.errorCode==="200"){
                     props.onChange(values,true)
                 }
         })
 
-        console.log('Success:', values);
+        ///console.log('Success:', values);
     };
 
     const onFinishFailed = (errorInfo:any) => {
@@ -28,8 +28,7 @@ export const Login:FC<{onChange:(userParam:{userName:string,phone:string}, statu
 
     return (
        <div className='loginBox'>
-           <div className="formBox">
-               <p>生死簿-后台管理系统</p>
+           <Card title={"生死簿-后台管理系统"} style={{ width: 600 }}>
                <Form
                    {...layout}
                    name="basic"
@@ -61,8 +60,7 @@ export const Login:FC<{onChange:(userParam:{userName:string,phone:string}, statu
                        </Button>
                    </Form.Item>
                </Form>
-           </div>
-
+           </Card>
        </div>
     );
 };
