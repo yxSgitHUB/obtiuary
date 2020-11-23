@@ -1,0 +1,1 @@
+interface userMeg {userName:string,phone:string}

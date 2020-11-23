@@ -21,7 +21,7 @@ Mock.mock('http://localhost:8081/test/city', 'get', () => {
 Mock.mock('http://localhost:8081/test/cityInfo', 'post', (data:any) => {
     // 请求传过来的参数在body中,传回的是json字符串,需要转义一下
     const info= JSON.parse(data.body)
-    console.log(info)
+    console.log("Mock-----",info)
     return {
         img: Random.image('200x100', '#4A7BF7', info.name)
     }
@@ -30,7 +30,7 @@ Mock.mock('http://localhost:8081/test/cityInfo', 'post', (data:any) => {
 Mock.mock('http://localhost:8081/test/login', 'post', (data:any) => {
     // 请求传过来的参数在body中,传回的是json字符串,需要转义一下
     const info= JSON.parse(data.body)
-    console.log(info)
+    console.log("Mock-----",info)
     if(info.userName==="admin"&&info.phone==="13311112222"){
         return {
             errorCode:"200",
